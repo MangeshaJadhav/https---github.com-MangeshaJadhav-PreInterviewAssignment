@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find the nodes Present and relationship in between</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <h4 id="h4">Information Abouts Nodes</h4>
+        <span
+          >All items in the DOM are defined as nodes. There are many types of
+          nodes, but there are three main ones that we work with most often:
+          1)Element nodes 2)Text nodes 3)Comment nodes</span
+        >
+
+      </div>
+      <h4>Output</h4>
+      <p id="result"></p>
+    </div>
+    <script>
+       const list= document.body.childNodes;
+       let emptyString="";
+       for(let i=0;i<list.length;i++){
+        emptyString=emptyString+list[i].nodeName+'<br>'
+       }
+       document.getElementById('result').innerHTML=emptyString;//this will return to page the all node info
+    </script>
+  </body>
+</html>
